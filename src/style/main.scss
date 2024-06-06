@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url(../assets/calgary-at-night-v0-j251s6rlyxob1.jpg);
+  @apply bg-fullcenter text-slate-50;
+}
+
+@layer components {
+  .container {
+    @apply max-w-[500px] mx-auto;
+  }
+  .flex {
+    &-fullcenter {
+      @apply flex justify-center items-center;
+    }
+
+    &-seperate {
+      @apply flex justify-between items-center;
+    }
+  }
+  .button {
+    @apply transition text-sm text-center font-semibold backdrop-blur-sm rounded md:w-auto inline-block w-full px-10 py-2 text-slate-800 bg-slate-200 bg-opacity-70 hover:bg-opacity-80;
+  }
+  .bg {
+    &-fullcenter {
+      @apply bg-center bg-cover bg-no-repeat;
+    }
+    &-fullobject {
+      @apply object-center object-cover;
+    }
+  }
+  .title {
+    @apply md:text-3xl text-xl font-bold;
+    &-lg {
+      @apply md:text-9xl text-5xl font-bold;
+    }
+  }
+  .field {
+    @apply bg-slate-200 border-0 text-sm transition-all duration-100 focus-within:ring-1 focus-within:ring-blue-600 block w-full px-3 py-2;
+  }
+  .select {
+    @apply bg-blue-400 text-blue-50 accent-white border-0 text-sm rounded transition-all duration-100 focus-within:ring-0 block w-40 px-3 py-1;
+  }
+  .para {
+    @apply max-md:text-sm font-extralight opacity-50;
+  }
+  .one {
+    &-bg {
+      @apply backdrop-blur-sm bg-slate-300 bg-opacity-40 shadow-xl;
+    }
+  }
+}
+@layer utilities {
+  .size-screen {
+    @apply w-screen h-screen;
+  }
+}
