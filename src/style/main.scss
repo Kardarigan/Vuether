@@ -8,11 +8,28 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
+  @apply transition-all;
 }
 
-body {
+#body {
   background-image: url(../assets/calgary-at-night-v0-j251s6rlyxob1.jpg);
   @apply bg-fullcenter text-slate-50;
+
+  &.Clear {
+    background-image: url(../assets/clear.png);
+  }
+  &.Clouds {
+    background-image: url(../assets/cloudy.png);
+  }
+  &.Rain {
+    background-image: url(../assets/rainy.png);
+  }
+  &.Snow {
+    background-image: url(../assets/snowy.png);
+  }
+  &.Mist {
+    background-image: url(../assets/mist.png);
+  }
 }
 
 @layer components {
